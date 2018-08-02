@@ -10,5 +10,9 @@
     "translab"
   ],
   "author": "Milely Marcial",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "firebase-tools": "^4.0.2",
+    "materialize": "^1.0.0"
+  }
 }
