@@ -12,7 +12,7 @@
   "author": "Milely Marcial",
   "license": "ISC",
   "devDependencies": {
-    "firebase-tools": "^4.0.2",
-    "materialize": "^1.0.0"
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   }
 }
