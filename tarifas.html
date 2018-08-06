@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style5.css">
+    <link rel="shortcut icon" href="imagen.png">
+    <title>TRANSLAB</title>
+  </head>
+  <body>  
+  
+    <nav class="grey darken-3"> 
+        <a href="#" class="brand-logo center">TRANS-LAB</a>
+        <ul id="slide-out" class="sidenav">
+            <li><a class="waves-effect" id="btnSaldo" href="verSaldo.html">Ver saldo<i class="material-icons amber-text">attach_money</i></a>
+            </li>
+            <li><a class="waves-effect" href="tarifas.html">Calcular tarifa<i class="material-icons amber-text">apps</i></a></li>
+            <li><a class="waves-effect" id="btnPerfil" href="perfil.html">Perfil<i class="material-icons amber-text">person</i></a></li>
+            <li><a class="waves-effect" href="preguntasF.html">Preguntas frecuentes<i class="material-icons amber-text">description</i></a></li>
+            <li><a class="waves-effect" id="btnHome" href="inicio.html">Home<i class="material-icons amber-text">arrow_forward</i></a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons ">menu</i></a>
+    </nav> 
+    <div class="container">
+        <div class="row calcular">
+                <div class="input-field col s12">
+                    <input id="numerot" type="text" class="validate">
+                    <label for="password" >Numero de tarjeta</label>
+                </div>
+          <div class=" col s6">
+            <label>Tarifa</label>
+            <select class="browser-default" disabled>
+              <option value="" disabled selected>Selecciona la tarifa</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+          <div class=" col s6">
+            <label>Tarjeta</label>
+            <select class="browser-default" disabled>
+              <option value="" disabled selected>Selecciona tu tarjeta</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div><br>
+          <div class="row">
+            <div class="col s12 calcular center">
+              <a class="waves-effect waves-light btn amber darken-2">CALCULAR</a>
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="src/js/materialize.js"></script>
+    <script src="src/js/main.js"></script>
+
+  </body>
+</html>
