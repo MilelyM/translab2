@@ -9,7 +9,7 @@ firestore.settings(settings);
 function cargarData() {
   let tarjeta = document.getElementById('numerot').value;
   var db = firebase.firestore();
-  db.collection('users').add({
+  db.collection('tarjetas').add({
     tarjeta: tarjeta
   })
     .then(function(docRef) {
@@ -18,6 +18,18 @@ function cargarData() {
     .catch(function(error) {
       console.error('Error adding document: ', error);
     });
+  var selec = document.getElementById('selec');
+  db.collection('tarjetas').onSnapshot((querySnapshot) => {
+  // limpiamos la tabla
+ 
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+      selec.innerHTML += `              
+      <option value="1">{doc.data().tarjeta</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>` ;
+    });
+  });
 }
 window.validarEmail = function(email) {
   
@@ -77,4 +89,3 @@ function carga() {
     console.log(`$${prueba3}`)
 }*/
  
-var selec = document.getElementById('selec');
