@@ -1,13 +1,25 @@
 // API http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip={id}
-/*firebase.initializeApp({
-  apiKey: 'AIzaSyCzqG8g1npkA3eGfFq2DYs631TXPZRiLI4',
-  authDomain: 'translab-a0940.firebaseapp.com',
-  projectId: 'translab-a0940'
-});
+// requerimiento de firebase para no romper codigo
+const firestore = firebase.firestore();
+const settings = {/* your settings... */ timestampsInSnapshots: true};
+firestore.settings(settings);
 
-// Initialize Cloud Firestore through Firebase*/
 
-window.validarEmail= function(email) {
+// Initialize Cloud Firestore through Firebase
+function cargarData() {
+  let tarjeta = document.getElementById('numerot').value;
+  var db = firebase.firestore();
+  db.collection('users').add({
+    tarjeta: tarjeta
+  })
+    .then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch(function(error) {
+      console.error('Error adding document: ', error);
+    });
+}
+window.validarEmail = function(email) {
   
   
 };
@@ -65,4 +77,4 @@ function carga() {
     console.log(`$${prueba3}`)
 }*/
  
-
+var selec = document.getElementById('selec');

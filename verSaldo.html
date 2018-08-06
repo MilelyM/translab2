@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="src/css/style5.css">
     <link rel="shortcut icon" href="imagen.png">
     <title>TRANSLAB</title>
-  </head>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+</head>
   <body>  
   
     <nav class="grey darken-3"> 
@@ -33,14 +35,14 @@
         </div>
         <div class=" col s12">
             <select class="browser-default" disabled>
-              <option value="" disabled selected>Choose your option</option>
+              <option value="" id="selec" disabled selected>Choose your option</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
             </select>
           </div><br>
         <div class="row">
-            <a class="waves-effect waves-light btn amber darken-2 " id="btnsaldo" >CONSULTAR SALDO</a>
+            <a class="waves-effect waves-light btn amber darken-2 " onclick="cargarData()" id="btnsaldo" >CONSULTAR SALDO</a>
         </div>
         
         <div class="row">
@@ -50,8 +52,7 @@
         
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+   
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
       // Initialize Firebase
