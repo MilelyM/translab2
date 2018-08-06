@@ -1,3 +1,3 @@
 window.setTimeout(function() {
-  location = 'inicio.html';
+  location = 'iniciarSesion.html';
 }, 5000);
