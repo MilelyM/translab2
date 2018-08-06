@@ -1,9 +1,16 @@
 // API http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip={id}
+/*firebase.initializeApp({
+  apiKey: 'AIzaSyCzqG8g1npkA3eGfFq2DYs631TXPZRiLI4',
+  authDomain: 'translab-a0940.firebaseapp.com',
+  projectId: 'translab-a0940'
+});
 
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
 window.validarEmail = function(email) {
   
   
-};
+};*/
 document.getElementById('btnsaldo').addEventListener('click', carga);
 function carga() {
   let tarjeta = document.getElementById('numerot').value;
@@ -24,6 +31,7 @@ function carga() {
       let saldoTarjeta = data[2];
 
       console.log(saldoTarjeta);
+      //agregFirebase(saldoTarjeta);
       // verSaldo(saldoTarjeta)
       // prueba(saldoTarjeta)
       // number = (saldoTarjeta) + 760;
@@ -55,4 +63,18 @@ function carga() {
      let prueba3 =new Intl.NumberFormat("de-DE").format(conHoraAlto);
     //let n = parseInt(prueba[0]) + number;
     console.log(`$${prueba3}`)
+}*/
+
+/* function agregFirebase(saldoTarjeta) {
+ let tarjeta = document.getElementById('numerot').value;
+  db.collection('tarjetas').add({
+    tarjeta: tarjeta,
+    saldoTarjeta: saldoTarjeta
+  })
+    .then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch(function(error) {
+      console.error('Error adding document: ', error);
+    });
 }*/
