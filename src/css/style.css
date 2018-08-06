@@ -9,8 +9,8 @@ body{
 
 }
 .logo{
-    width: 40%;
-    margin-top: 2em;
+    width: 30%;
+    margin-top: 9em;
 }
 .caja{
     background-color: white;
@@ -20,7 +20,7 @@ body{
 
 }
 span{
-    font-size: 2em !important;
+    font-size: 5em !important;
     font-weight: bolder;
 }
 
