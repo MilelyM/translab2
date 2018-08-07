@@ -11,6 +11,7 @@ function cargarData() {
   var db = firebase.firestore();
   db.collection('tarjetas').add({
     tarjeta: tarjeta
+
   })
     .then(function(docRef) {
       console.log('Document written with ID: ', docRef.id);
@@ -23,11 +24,14 @@ function cargarData() {
   // limpiamos la tabla
  
     querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
+      //console.log(`${doc.id} => ${doc.data()}`);
+      //console.log(doc.data().tarjeta);
+      console.log(doc.id)
+
       selec.innerHTML += `              
-      <option value="1">{doc.data().tarjeta</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>` ;
+      <option>${doc.data().tarjeta}</option>
+      
+     ` ;
     });
   });
 }
