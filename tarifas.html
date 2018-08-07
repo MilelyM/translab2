@@ -27,16 +27,16 @@
     <div class="container">
         <div class="row calcular">
                 <div class="input-field col s12">
-                    <input id="numerot" type="text" class="validate">
+                    <input id="numerot2" type="text" class="validate">
                     <label for="password" >Numero de tarjeta</label>
                 </div>
           <div class=" col s12 m6 l6">
             <label>Tarifa</label>
-            <select class="browser-default">
+            <select id="selec2" class="browser-default">
               <option  value="" disabled selected>Selecciona la tarifa</option>
-              <option  value="1">$760</option>
-              <option value="2">$680</option>
-              <option value="3">$630</option>
+              <option  value="760">$760</option>
+              <option value="680">$680</option>
+              <option value="630">$630</option>
             </select>
           </div>
           <div class=" col s12 m6 l6">
@@ -50,7 +50,10 @@
           </div><br>
           <div class="row">
             <div class="col s12 calcular center">
-              <a class="waves-effect waves-light btn amber darken-2 btncalcular">CALCULAR</a>
+              <a class="waves-effect waves-light btn amber darken-2 btncalcular" id="btnsaldo2" >CALCULAR</a>
+              </div>
+              <div class="col s12" id="tarifa">
+
               </div>
           </div>
         </div>

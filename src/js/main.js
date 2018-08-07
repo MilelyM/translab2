@@ -24,17 +24,19 @@ function cargarData() {
   // limpiamos la tabla
  
     querySnapshot.forEach((doc) => {
-      //console.log(`${doc.id} => ${doc.data()}`);
-      //console.log(doc.data().tarjeta);
+      console.log(`${doc.id} => ${doc.data()}`);
+      console.log(doc.data().tarjeta);
       console.log(doc.id)
 
-      selec.innerHTML += `              
+      selec.innerHTML = `     
+      <select >
       <option>${doc.data().tarjeta}</option>
-      
-     ` ;
+      </select> 
+     ` + selec.innerHTML;
     });
   });
 }
+cargarData()
 window.validarEmail = function(email) {
   
   
