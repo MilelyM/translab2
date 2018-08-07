@@ -37,10 +37,7 @@ function cargarData() {
   });
 }
 cargarData()
-window.validarEmail = function(email) {
-  
-  
-};
+
 document.getElementById('btnsaldo').addEventListener('click', carga);
 function carga() {
   let tarjeta = document.getElementById('numerot').value;
