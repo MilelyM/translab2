@@ -17,8 +17,8 @@ function calcularTarifa() {
       var regex = /(\d+)/g;
       console.log(saldoTarjeta2.match(regex)); 
       let prueba = saldoTarjeta2.match(regex);
-      let prueba2 = prueba[0] += prueba[1];
-    
+      let prueba2 = parseInt(prueba[0] += prueba[1]) ;
+
       let conHora = document.getElementById('selec2').value;
     
       // console.log(conHoraAlto)
