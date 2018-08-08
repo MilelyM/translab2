@@ -21,24 +21,25 @@ function cargarData() {
     .catch(function(error) {
       console.error('Error adding document: ', error);
     });
-  var selec = document.getElementById('selec');
 
-  db.collection('tarjetas').onSnapshot((querySnapshot) => {
-  // limpiamos la tabla
-  selec.innerHTML='';
-    querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
-      console.log(doc.data().tarjeta);
-      console.log(doc.id);
-
-      selec.innerHTML = `     
-      <select >
-      <option>${doc.data().tarjeta}</option>
-      </select> 
-     ` + selec.innerHTML;
-    });
-  });
 }
+var selec = document.getElementById('selec');
+
+db.collection('tarjetas').onSnapshot((querySnapshot) => {
+// limpiamos la tabla
+  selec.innerHTML = '';
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data()}`);
+    console.log(doc.data().tarjeta);
+    console.log(doc.id);
+
+    selec.innerHTML = `     
+    <select >
+    <option>${doc.data().tarjeta}</option>
+    </select> 
+   ` + selec.innerHTML;
+  });
+});
 // cargarData()
 
 document.getElementById('btnsaldo').addEventListener('click', carga);
