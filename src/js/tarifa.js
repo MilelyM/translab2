@@ -7,7 +7,7 @@ document.getElementById('btnsaldo2').addEventListener('click', calcularTarifa);
 function calcularTarifa() {
   let tarjeta2 = document.getElementById('numerot2').value;
 
-  fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${tarjeta2}`)
+  fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${tarjeta2}`)
     .then(function(resp) {
       // console.log(resp.json())
       return resp.json();

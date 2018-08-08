@@ -46,7 +46,7 @@ document.getElementById('btnsaldo').addEventListener('click', carga);
 function carga() {
   let tarjeta = document.getElementById('numerot').value;
 
-  fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${tarjeta}`)
+  fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${tarjeta}`)
     .then(function(resp) {
       // console.log(resp.json())
       return resp.json();
@@ -79,7 +79,7 @@ function carga() {
       // document.getElementById('cajaDeTexto').innerHTML = saldoTarjeta;
     });
 }
-
+ 
 
 /* function prueba(saldoTarjeta){
     var regex = /(\d+)/g;
