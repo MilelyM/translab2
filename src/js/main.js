@@ -3,6 +3,7 @@
 const firestore = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 firestore.settings(settings);
+var db = firebase.firestore();
 
 
 // Initialize Cloud Firestore through Firebase
@@ -15,18 +16,20 @@ function cargarData() {
   })
     .then(function(docRef) {
       console.log('Document written with ID: ', docRef.id);
+      document.getElementById('numerot').value = '' ;
     })
     .catch(function(error) {
       console.error('Error adding document: ', error);
     });
   var selec = document.getElementById('selec');
+
   db.collection('tarjetas').onSnapshot((querySnapshot) => {
   // limpiamos la tabla
- 
+  selec.innerHTML='';
     querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       console.log(doc.data().tarjeta);
-      console.log(doc.id)
+      console.log(doc.id);
 
       selec.innerHTML = `     
       <select >
@@ -36,7 +39,7 @@ function cargarData() {
     });
   });
 }
-cargarData()
+// cargarData()
 
 document.getElementById('btnsaldo').addEventListener('click', carga);
 function carga() {
@@ -69,7 +72,10 @@ function carga() {
       // console.log(data);
       // console.log(estadoContrato);
       // console.log(saldoTarjeta);
-      document.getElementById('cajaDeTexto').innerHTML = saldoTarjeta;
+      cajaDeTexto.innerHTML = 
+      `<h6 class='teal grey darken-3 white-text'>SALDO TOTAL</h6>
+          <p class='teal amber darken-2 white-text'>${saldoTarjeta}</p>`;
+      // document.getElementById('cajaDeTexto').innerHTML = saldoTarjeta;
     });
 }
 

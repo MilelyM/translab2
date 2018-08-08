@@ -1,3 +1,7 @@
+const firestore = firebase.firestore();
+const settings = {/* your settings... */ timestampsInSnapshots: true};
+firestore.settings(settings);
+var db = firebase.firestore();
 document.getElementById('btnsaldo2').addEventListener('click', calcularTarifa);
 
 function calcularTarifa() {
@@ -31,22 +35,21 @@ function calcularTarifa() {
       document.getElementById('tarifa').innerHTML = `$${prueba3}`;
     });
 }
-/*
-function calcularTarifa() {
-}
-var selec = document.getElementById('selec2');
+
+
+var selec3 = document.getElementById('selec3');
 db.collection('tarjetas').onSnapshot((querySnapshot) => {
 // limpiamos la tabla
+  selec3.innerHTML = '';
 
   querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
-    console.log(doc.data().tarjeta);
-    console.log(doc.id);
-
-    selec.innerHTML = `     
+    // console.log(`${doc.id} => ${doc.data()}`);
+    // console.log(doc.data().tarjeta);
+    // console.log(doc.id);
+    selec3.innerHTML = `     
     <select >
     <option>${doc.data().tarjeta}</option>
     </select> 
-   ` + selec.innerHTML;
+   ` + selec3.innerHTML;
   });
-});*/
+});
